@@ -22,12 +22,27 @@ export default function TaskForm({onAddTask}) {
         value={newTitle}
         placeholder="Nouvelle tâche"
       />
-      <Button title="Ajouter" onPress={onAddNewTask} color="#841584" />
+
+      <Button
+        style={styles.buttonAdd}
+        title="Ajouter"
+        onPress={onAddNewTask}
+        color="#841584"
+      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  buttonAdd: {
+    elevation: 8,
+    backgroundColor: "#009688",
+    borderWidth: 5,
+    borderRadius: 12,
+    paddingVertical: 10,
+    paddingHorizontal: 12
+  },
+
   container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
